@@ -3,14 +3,15 @@ import './App.css';
 import Navbar from './Navbar';
 import Section from './Section';
 import Slider from './Slider';
+import Popular from './components/Popular';
 
 
 function App() {
   return (
     <>
    <Navbar/>
-   {/* <Section/> */}
    <Slider/>
+   <Popular/>
     </>
   );
 }

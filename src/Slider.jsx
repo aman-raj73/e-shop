@@ -6,8 +6,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 // import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
-import banner1 from './asset/banner-1.png'
+import mens from './asset/banner-1.png'
 import handImage from './asset/images.png'
+import womens from './asset/womens.png'
+import kids from './asset/kids.png'
 
 // import './styles.css';
 
@@ -18,7 +20,7 @@ import Section from './Section';
 const Slider = () => {
   return (
 <>
-<div className="main" style={{height:'auto',background:'linear-gradient(135deg,rgba(219, 233, 244, 0.67),rgba(178, 223, 219, 0.65))',marginTop:'88px'}}>
+<div className="main" style={{height:'auto',background:'linear-gradient(180deg,#47fdae,#e1ffea22 60%)',marginTop:'86px'}}>
  <Swiper
        
         speed={600}
@@ -46,18 +48,18 @@ const Slider = () => {
         ></div>
         <SwiperSlide>
           <div className="text" data-swiper-parallax="-100">
-          <Section/>
+          <Section image={mens}/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           
           <div className="text" data-swiper-parallax="-100">
-           <Section/>
+           <Section image={womens}/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="text" data-swiper-parallax="-100">
-           <Section/>
+           <Section image={kids}/>
           </div>
         </SwiperSlide>
       </Swiper>
