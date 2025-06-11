@@ -7,9 +7,9 @@ const Popular = () => {
      <div className="container mt-5">
   <h1 className='text-center'>Our Latest Deals</h1>
   <hr />
-  <div className="row mt-5">
+  <div className="row mt-5 justify-content-center">
     {data_product.map((item, i) => (
-      <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
+      <div className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
         <Item
           id={item.id}
           name={item.name}

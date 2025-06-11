@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,7 +7,7 @@ import 'swiper/css';
 // import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
 import mens from './asset/banner-1.png'
-import handImage from './asset/images.png'
+// import handImage from './asset/images.png'
 import womens from './asset/womens.png'
 import kids from './asset/kids.png'
 
