@@ -19,7 +19,10 @@ function App() {
     <Route path='/men' element={<Shopcategory/>}/>
     <Route path='/women' element={<Shopcategory/>}/>
     <Route path='/kids' element={<Shopcategory/>}/>
-    <Route path='/product' element={<Product/>}/>
+    <Route path='/casual' element={<Product category="casual"/>}/>
+    <Route path='/western' element={<Product category="western"/>}/>
+    <Route path='/winter' element={<Product category="winter"/>}/>
+    <Route path='/summer' element={<Product category="summer"/>}/>
     <Route path="/product/:productId" element={<Product/>}/>
    </Routes>
    </BrowserRouter>

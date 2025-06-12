@@ -7,7 +7,7 @@ let data_product = [
   {
     id: 1,
     // name: "Kurti",
-    // category: "women",
+    category: "casual",
     image: p1_img,
     new_price: 50.0,
     old_price: 80.5
@@ -16,7 +16,7 @@ let data_product = [
   {
       id: 2,
       // name: "Jeans",
-      // category: "men", 
+      category: "summer", 
       image: p2_img,
       new_price: 60.0, 
       old_price: 90.5 
@@ -24,7 +24,7 @@ let data_product = [
   { 
     id: 3,
     // name: "Saree",  
-    // category: "women",
+    category: "winter",
     image: p3_img,
     new_price: 75.0,
     old_price: 120.0 
@@ -32,7 +32,7 @@ let data_product = [
   { 
     id: 4,
     // name: "Jacket",
-    // category: "men",
+    category: "western",
     image: p4_img,
     new_price: 90.0,
     old_price: 140.0
