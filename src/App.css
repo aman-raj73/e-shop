@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+.marquee-wrapper{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #d6d6d6;
+}
+.marquee-track{
+  display: flex;
+  animation: scroll-marquee 30s linear infinite;
+  width: max-content;
+}
+.marquee-track img{
+  height: 125px;
+  width: 200px;
+  object-fit: cover;
+}
+@keyframes scroll-marquee{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
