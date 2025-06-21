@@ -14,7 +14,7 @@ import western from './w.jpeg'
 import western1 from './w1.jpeg'
 import western2 from './w2.jpeg'
 import western3 from './w3.jpeg'
-import { type } from '@testing-library/user-event/dist/type'
+// import { type } from '@testing-library/user-event/dist/type'
 
 let all_product = [
     {

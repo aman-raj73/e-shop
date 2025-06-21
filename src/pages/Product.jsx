@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Shopcontext } from '../Context/Shopcontext'
-import Item from '../components/Item';
+import Showitem from '../components/Showitem';
 
 const Product = (props) => {
     const {all_product} = useContext(Shopcontext);
@@ -11,7 +11,7 @@ const Product = (props) => {
             if(props.category === item.category){
             return (
                 <div className="col-lg-3 mb-5">
-                    <Item key={idx} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
+                    <Showitem key={idx} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
                 </div>
                 
             )

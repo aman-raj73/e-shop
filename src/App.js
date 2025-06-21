@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Navbar';
 import Home from './pages/Home'
 import Shopcategory from './pages/Shopcategory'
+import SingleProduct from './pages/SingleProduct';
 import Product from './pages/Product'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -23,7 +24,8 @@ function App() {
     <Route path='/western' element={<Product category="western"/>}/>
     <Route path='/winter' element={<Product category="winter"/>}/>
     <Route path='/summer' element={<Product category="summer"/>}/>
-    <Route path="/product/:productId" element={<Product/>}/>
+    {/* <Route path="/product/:productId" element={<Product/>}/> */}
+    <Route path="/product/:productId" element={<SingleProduct/>}/>
    </Routes>
    </BrowserRouter>
     </>
