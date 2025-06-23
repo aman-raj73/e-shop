@@ -1,27 +1,57 @@
 import React from 'react'
 // import { Shopcontext } from '../Context/Shopcontext';
 import { FaStar } from 'react-icons/fa'
+import { FaTag } from 'react-icons/fa';
 const Productdispaly = (props) => {
-  const {product} = props;
+  const {products_display} = props;
   return (
     <>
     <div className="container" style={{marginTop:'100px'}}>
       <div className="row">
         <div className="col-2">
-          <img src={product.image} alt="" className='img-fluid' style={{height:'200px'}}/>
-          <img src={product.image} alt="" className='img-fluid' style={{height:'200px'}}/>
-          <img src={product.image} alt="" className='img-fluid' style={{height:'200px'}}/>
+          <img src={products_display.image} alt="" className='img-fluid' style={{height:'200px'}}/>
+          <img src={products_display.image1} alt="" className='img-fluid' style={{height:'200px'}}/>
+          <img src={products_display.image2} alt="" className='img-fluid' style={{height:'200px'}}/>
         </div>
         <div className="col-4">
-          <img src={product.image} alt="" className='img-fluid'/>
+          <div className="card p-2">
+          <img src={products_display.image} style={{height:'600px'}} alt="" className='img-fluid'/>
+          </div>
         </div>
-        <div className="col-6">
-          <h2>{product.name}</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolore odio, culpa similique dignissimos doloribus tempora repellat placeat eaque accusamus magnam perspiciatis reiciendis tempore, laborum sint a libero rem. Nulla.</p>
-          <FaStar/>
-          <FaStar/>
-          <FaStar/>
-          <FaStar/>
+        <div className="col-5 offset-1 mt-3">
+          <h2 className='fw-bold text-info'>{products_display.name}</h2>
+          <p>Description : {products_display.description}</p>
+          <span className='fs-2 fw-bold'>Price : <s className='text-danger fs-4'>{products_display.old_price}</s></span>
+          <span className='mx-4 fs-4'>₹{products_display.new_price}</span>
+          <div className='mt-3 d-flex gap-4'>
+            <span className='fw-bold fs-2'>Size</span>
+            <div className='p-3 bg-light'>S</div>
+            <div className='p-3 bg-light'>M</div>
+            <div className='p-3 bg-light'>L</div>
+            <div className='p-3 bg-light'>Xl</div>
+           
+          </div>
+          <div className="text-warning mt-3">
+          <FaStar className='mx-2'/>
+          <FaStar className='mx-2'/>
+          <FaStar className='mx-2'/>
+          <FaStar className='mx-2'/>
+          </div>
+          <button className='btn btn-success btn btn-lg mt-3'>Add To Cart</button>
+          <button className='btn btn-warning btn btn-lg mt-3 mx-3'>Buy Now</button>
+
+          <div className='mt-3'>
+            <h4 className='fw-bold'>Coupons For Use</h4>
+            <hr />
+            <FaTag className='text-success'/>
+            <span className='mx-3'>Bank Offer100% Cashback upto 500Rs on Axis Bank SuperMoney Rupay CC UPI transactions on super.money UPIT&C</span>
+             <br />
+             <br />
+             <hr />
+            <FaTag className='text-success'/>
+            <span className='mx-3'>Bank Offer5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarterT&C</span>
+
+          </div>
         </div>
       </div>
     </div>
@@ -30,3 +60,4 @@ const Productdispaly = (props) => {
 }
 
 export default Productdispaly
+

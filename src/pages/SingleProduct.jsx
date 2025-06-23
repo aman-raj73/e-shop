@@ -8,7 +8,7 @@ const SingleProduct = () => {
     const {productId} = useParams();
     const product = all_product.find((e)=> e.id === parseInt(productId));
   return (
-    <Productdispaly product={product}/>
+    <Productdispaly products_display={product}/>
   )
 }
 

@@ -14,7 +14,11 @@ import western from './w.jpeg'
 import western1 from './w1.jpeg'
 import western2 from './w2.jpeg'
 import western3 from './w3.jpeg'
-// import { type } from '@testing-library/user-event/dist/type'
+import half1 from './image2.jpeg'
+import half2 from './image1.jpeg'
+import tshirt1 from './tshirt1.webp'
+import tshirt2 from './tshirt2.webp'
+import tshirt3 from './tshirt3.webp'
 
 let all_product = [
     {
@@ -73,6 +77,8 @@ let all_product = [
         category : "summer",
         type : "men",
         image : summer1,
+        image1 : half1,
+        image2 : half2,
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
         old_price : 900,
         new_price : 700
@@ -212,6 +218,18 @@ let all_product = [
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
         old_price : 799,
         new_price : 599
+    },
+    {
+        id : 21,
+        name : "Half T-Shirt",
+        category : "summer",
+        type : "men",
+        image : tshirt1,
+        image1 : tshirt2,
+        image2 : tshirt3,
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
+        old_price : 900,
+        new_price : 700
     },
 ]
 export default all_product
