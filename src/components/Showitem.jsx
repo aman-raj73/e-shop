@@ -6,10 +6,11 @@ const Showitem = (props) => {
   return (
    <>
    <div className="card p-3" onMouseEnter={() =>setAbc(true)} onMouseLeave={() =>setAbc(false)}>
-    <div style={{overflow:'hidden',height:'350px'}}>
+    <div style={{overflow:'hidden',display:'flex',justifyContent:'center'}}>
     <Link to={`/product/${props.id}`}>
     <img src={props.image} alt="" className='img-fluid' 
     style={{
+      maxHeight :'300px',
       transition:'1s',
       transform : xyz ? 'scale(1.2)' : ''
     }}
@@ -18,7 +19,7 @@ const Showitem = (props) => {
 
     </div>
     <div className="card-body text-center">
-        <h4>{props.name}</h4>
+        <h4 className='fs-6'>{props.name}</h4>
         <span><s>{props.old_price}</s></span>
         <span className='mx-3 fw-bold text-warning'>{props.new_price}</span>
          <h3 className='mt-3 fs-4 fw-bold'>{props.category}</h3>

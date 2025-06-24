@@ -6,7 +6,7 @@ const Item = (props) => {
   return (
    <>
    <div className="card p-3" onMouseEnter={() =>setAbc(true)} onMouseLeave={() =>setAbc(false)}>
-    <div style={{overflow:'hidden',height:'350px'}}>
+    <div style={{overflow:'hidden',maxHeight:'350px'}}>
     <Link to={`/${props.category}`}>
     <img src={props.image} alt="" className='img-fluid' 
     style={{

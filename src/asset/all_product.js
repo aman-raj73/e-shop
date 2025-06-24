@@ -19,6 +19,15 @@ import half2 from './image1.jpeg'
 import tshirt1 from './tshirt1.webp'
 import tshirt2 from './tshirt2.webp'
 import tshirt3 from './tshirt3.webp'
+import halfcaptshirt from './halfcaptshirt.webp'
+import halftshirt1 from './halftshirt1.webp'
+import halftshirt2 from './halftshirt2.webp'
+import halftshirt3 from './halftshirt3.webp'
+import shopping123 from './shopping123.webp'
+import shopping1234 from './shopping1234.webp'
+import shopping12345 from './shopping12345.webp'
+
+
 
 let all_product = [
     {
@@ -73,7 +82,7 @@ let all_product = [
     },
     {
         id : 6,
-        name : "Half Shirt with Nikker",
+        name : "Half Shirt",
         category : "summer",
         type : "men",
         image : summer1,
@@ -227,6 +236,42 @@ let all_product = [
         image : tshirt1,
         image1 : tshirt2,
         image2 : tshirt3,
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
+        old_price : 900,
+        new_price : 700
+    },
+    {
+        id : 22,
+        name : "Half T-Shirt",
+        category : "summer",
+        type : "men",
+        image :halfcaptshirt,
+        image1 : tshirt1,
+        image2 : tshirt2,
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
+        old_price : 900,
+        new_price : 700
+    },
+     {
+        id : 23,
+        name : "Half T-Shirt",
+        category : "summer",
+        type : "men",
+        image : halftshirt1,
+        image1 : halftshirt2,
+        image2 : halftshirt3,
+        description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
+        old_price : 900,
+        new_price : 700
+    },
+    {
+        id : 24,
+        name : "Half T-Shirt",
+        category : "summer",
+        type : "men",
+        image : shopping123,
+        image1 : shopping1234,
+        image2 : shopping12345,
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
         old_price : 900,
         new_price : 700

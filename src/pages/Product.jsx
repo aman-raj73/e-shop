@@ -10,7 +10,7 @@ const Product = (props) => {
         {all_product.map((item, idx) =>{
             if(props.category === item.category){
             return (
-                <div className="col-lg-3 mb-5">
+                <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6 mb-5">
                     <Showitem key={idx} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
                 </div>
                 

@@ -1,24 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { Shopcontext } from '../Context/Shopcontext';
 import { FaStar } from 'react-icons/fa'
 import { FaTag } from 'react-icons/fa';
 const Productdispaly = (props) => {
-  const {products_display} = props;
+    const {products_display} = props;
+  const images = [products_display.image,products_display.image1,products_display.image2];
+  const [active, setactive] = useState(0)
+
   return (
     <>
     <div className="container" style={{marginTop:'100px'}}>
       <div className="row">
-        <div className="col-2">
-          <img src={products_display.image} alt="" className='img-fluid' style={{height:'200px'}}/>
-          <img src={products_display.image1} alt="" className='img-fluid' style={{height:'200px'}}/>
-          <img src={products_display.image2} alt="" className='img-fluid' style={{height:'200px'}}/>
-        </div>
+        <div className="col-xl-6">
+          <div className="row">
         <div className="col-4">
+
+          {images.map((img,idx)=>(
+
+             <img key={idx} src={img} className='img-fluid mb-3' style={{maxHeight:'150px'}} onMouseEnter={()=> setactive(idx)}/>
+
+          ))}
+        </div>
+        <div className="col-8">
           <div className="card p-2">
-          <img src={products_display.image} style={{height:'600px'}} alt="" className='img-fluid'/>
+          <img src={images[active]} style={{maxHeight:'600px'}} alt="" className='img-fluid'/>
           </div>
         </div>
-        <div className="col-5 offset-1 mt-3">
+        </div>
+        </div>
+        <div className="col-xl-5 offset-xl-1 mt-3">
           <h2 className='fw-bold text-info'>{products_display.name}</h2>
           <p>Description : {products_display.description}</p>
           <span className='fs-2 fw-bold'>Price : <s className='text-danger fs-4'>{products_display.old_price}</s></span>

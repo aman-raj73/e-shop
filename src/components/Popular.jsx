@@ -9,7 +9,7 @@ const Popular = () => {
   <hr />
   <div className="row mt-5 justify-content-center">
     {data_product.map((item, i) => (
-      <div className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
+      <div className="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-3 mb-4" key={i}>
         <Item
           id={item.id}
           name={item.name}
