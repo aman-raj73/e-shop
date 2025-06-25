@@ -26,6 +26,12 @@ import halftshirt3 from './halftshirt3.webp'
 import shopping123 from './shopping123.webp'
 import shopping1234 from './shopping1234.webp'
 import shopping12345 from './shopping12345.webp'
+import shirt from './shirt.avif'
+import shirt1 from './shirt1.jpeg'
+import shirt2 from './shirt2.jpeg'
+import girl from './girl.webp'
+import girl1 from './girl1.webp'
+import girl2 from './girl2.jpg'
 
 
 
@@ -193,19 +199,24 @@ let all_product = [
         new_price : 1599
     },
     {
-        id : 17,
-        name : "Cap Shirt",
-        category : "casual",
-        image : casual,
+      id : 17,
+        name : "Shirt",
+        category : "western",
+        type : "men",
+        image : shirt,
+        image1 : shirt1,
+        image2 : shirt2,
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
-        old_price : 1600,
-        new_price : 1200
+        old_price : 900,
+        new_price : 700
     },
     {
         id : 18,
         name : "White Printed Top",
         category : "casual",
-        image : casual1,
+        image : girl,
+        image1 : girl1,
+        image2 : girl2,
         description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi delectus reprehenderit eaque id consectetur natus aspernatur, inventore dolorum nulla eos",
         old_price : 900,
         new_price : 700

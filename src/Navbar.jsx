@@ -33,7 +33,9 @@ const Navbar = () => {
       </ul>
       <form className="d-flex gap-4">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <Link to='/cart'>
         <FaCartShopping className='fs-2 text-danger'/>
+        </Link>
       </form>
     </div>
   </div>

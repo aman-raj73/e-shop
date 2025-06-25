@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 // import { Shopcontext } from '../Context/Shopcontext';
 import { FaStar } from 'react-icons/fa'
 import { FaTag } from 'react-icons/fa';
+import { Shopcontext } from '../Context/Shopcontext';
+import { Link } from 'react-router-dom';
 const Productdispaly = (props) => {
-    const {products_display} = props;
+
+  const {addToCart} = useContext(Shopcontext)
+  const {products_display} = props;
+
   const images = [products_display.image,products_display.image1,products_display.image2];
   const [active, setactive] = useState(0)
 
@@ -47,7 +52,9 @@ const Productdispaly = (props) => {
           <FaStar className='mx-2'/>
           <FaStar className='mx-2'/>
           </div>
-          <button className='btn btn-success btn btn-lg mt-3'>Add To Cart</button>
+          <Link to="/cart">
+          <button className='btn btn-success btn btn-lg mt-3' onClick={() => addToCart(products_display.id)}>Add To Cart</button>
+          </Link>
           <button className='btn btn-warning btn btn-lg mt-3 mx-3'>Buy Now</button>
 
           <div className='mt-3'>
