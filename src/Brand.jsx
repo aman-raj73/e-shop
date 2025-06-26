@@ -20,10 +20,10 @@ const Brand = () => {
       <div className="marquee-wrapper py-5">
         <div className="marquee-track my-3">
             {logos.map((logo, idx)=>(
-                <img key={`first${idx}`} src={logo} className='img-fluid'/>
+                <img key={`first${idx}`} src={logo} alt='' className='img-fluid'/>
             ))}
             {logos.map((logo, idx)=>(
-                <img key={`second${idx}`} src={logo} className='img-fluid'/>
+                <img key={`second${idx}`} src={logo} alt='' className='img-fluid'/>
             ))}
         </div>
       </div>

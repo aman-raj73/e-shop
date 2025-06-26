@@ -4,7 +4,7 @@ import { FaDeleteLeft } from 'react-icons/fa6'
 import { Shopcontext } from '../Context/Shopcontext'
 
 const CartShow = () => {
-  const {cartItem,all_product} = useContext(Shopcontext);
+  const {cartItem,all_product,addToCart,removeCartItem,removeAllCartItem,getTotalCartItem,getTotalCartAmount} = useContext(Shopcontext);
   return (
     <>
     <div className="cartItem" style={{marginTop:'120px'}}>
@@ -20,16 +20,17 @@ const CartShow = () => {
          {all_product.map((e) =>{
             if(cartItem[e.id] > 0){
               return (
-                <div key={e.id} className='d-flex justify-content-around fs-4 fw-bold'>
+                <div key={e.id} className='d-flex justify-content-around fs-4 fw-bold mb-4'>
         <img src={e.image} alt="" style={{height:'100px'}} />
          <p>{e.name}</p>
-         <p className='p-2 bg-light d-flex gap-3'>
-            <span className='fs-3 text-success'>+</span>
+         <p className='p-2 bg-light d-flex gap-3' style={{cursor:'pointer',height:'55px'}}>
+            <span onClick={() => addToCart(e.id)} className='fs-3 text-success'>+</span>
             {cartItem[e.id]}
-            <span className='fs-3 text-danger'>-</span>
+            <span className='fs-3 text-danger'
+            onClick={() => removeCartItem(e.id)}>-</span>
             </p>
         <p>{e.new_price * cartItem[e.id]}</p>
-        <FaDeleteLeft/>
+        <FaDeleteLeft onClick={() => removeAllCartItem(e.id)}/>
     </div>
                 
               )
@@ -46,7 +47,7 @@ const CartShow = () => {
         <div className="col-6 bg-light p-3 border border-2 rounded">
           <div className='d-flex justify-content-between'>
           <div>
-            <p>Total</p>
+            <p>Total Amount</p>
             <hr />
             <p>Total Items</p>
             <hr />
@@ -54,9 +55,9 @@ const CartShow = () => {
             <hr />
           </div>
           <div>
-            <p>500</p>
+            <p>{getTotalCartAmount()}</p>
             <hr />
-            <p>1</p>
+            <p>{getTotalCartItem()} </p>
             <hr />
             <p>free</p>
             <hr />
