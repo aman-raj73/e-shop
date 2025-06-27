@@ -3,11 +3,12 @@ import { Shopcontext } from '../Context/Shopcontext'
 import Showitem from '../components/Showitem';
 
 const Product = (props) => {
-    const {all_product} = useContext(Shopcontext);
+    const {FilterProductBySearch} = useContext(Shopcontext);
+    const filterProduct = FilterProductBySearch();
   return (
    <div className="container" style={{marginTop:'100px'}}>
     <div className="row">
-        {all_product.map((item, idx) =>{
+        {filterProduct.map((item, idx) =>{
             if(props.category === item.category){
             return (
                 <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6 mb-5">

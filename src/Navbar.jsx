@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom'
 import { Shopcontext } from './Context/Shopcontext'
 
 const Navbar = () => {
-  const {getTotalCartItem} = useContext(Shopcontext);
+  const {getTotalCartItem,searchQuery,setSearchQuery} = useContext(Shopcontext);
   const [abc,setabc] = useState(false)
+  const [bcd,setbcd] = useState(false)
+   const [cde,setcde] = useState(false)
+     const [def,setdef] = useState(false)
+
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{backgroundColor:'#EAEFEF'}}>
@@ -31,19 +35,26 @@ const Navbar = () => {
           }}
           >Mens</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link fw-bold" to="/women">Womens</Link>
+        <li className="nav-item" onMouseEnter={() => setbcd(true)} onMouseLeave={() => setbcd(false)}>
+          <Link className="nav-link fw-bold" to="/women"  style={{
+            borderBottom : bcd ? "2px solid black" : ""
+          }}>Womens</Link>
         </li>
-        <li className="nav-item">
-          <Link className="nav-link fw-bold" to="/kids">kids</Link>
+        <li className="nav-item" onMouseEnter={() => setcde(true)} onMouseLeave={() => setcde(false)}>
+          <Link className="nav-link fw-bold" to="/kids"  style={{
+            borderBottom : cde ? "2px solid black" : ""
+          }}>kids</Link>
         </li>
         
-        <li className="nav-item">
-          <Link className="nav-link fw-bold" to="#" tabindex="-1" aria-disabled="true">Contact</Link>
+        <li className="nav-item" onMouseEnter={() => setdef(true)} onMouseLeave={() => setdef(false)}>
+          <Link className="nav-link fw-bold" to="#" tabindex="-1" aria-disabled="true" style={{
+            borderBottom : def ? "2px solid black" : ""
+          }}>Contact</Link>
         </li>
       </ul>
-      <form className="d-flex gap-4">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <div className="d-flex gap-4">
+        <input className="form-control me-2" type="search" value={searchQuery} placeholder="Search" aria-label="Search"
+        onChange={(e) => setSearchQuery(e.target.value)}/>
         <Link to='/cart'>
         <div className='position-relative'>
         <FaCartShopping className='fs-2 text-warning fs-1'/>
@@ -62,7 +73,7 @@ const Navbar = () => {
         </span>
         </div>
         </Link>
-      </form>
+      </div>
     </div>
   </div>
 </nav>

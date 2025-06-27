@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import data_product from '../asset/data'
 import Item from './Item'
 
 const Popular = () => {
+  
   return (
      <div className="container mt-5">
   <h1 className='text-center'>Our Latest Deals</h1>

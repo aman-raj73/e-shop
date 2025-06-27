@@ -21,6 +21,7 @@ const getInitialCart = () =>{
 
 
   const [cartItem, setCartItem] = useState(getInitialCart);
+  const [searchQuery, setSearchQuery] =useState("")
 
 
  useEffect(() => {
@@ -67,6 +68,18 @@ const getInitialCart = () =>{
     }
     return totalAmount
   }
+
+
+  const FilterProductBySearch = ()=>{
+    return all_product.filter((product) =>{
+      const query = searchQuery.toLowerCase();
+      const price = product.new_price.toString();
+      return (
+        product.name.toLowerCase().includes(query) ||
+        price.includes(query)
+      )
+    })
+  }
   const contextValue = {
     all_product,
     cartItem,
@@ -74,7 +87,10 @@ const getInitialCart = () =>{
     removeCartItem,
     removeAllCartItem,
     getTotalCartItem,
-    getTotalCartAmount
+    getTotalCartAmount,
+    FilterProductBySearch,
+    searchQuery,
+    setSearchQuery
   };
 
   return (
